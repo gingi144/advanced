@@ -193,7 +193,9 @@ section p {
 .python {
     background: #4caf50;
 }
-
+.c {
+    background: red;
+}
 
 
 .javascript {
