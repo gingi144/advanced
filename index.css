@@ -194,9 +194,7 @@ section p {
     background: #4caf50;
 }
 
-.c {
-    background: red;
-}
+
 
 .javascript {
     background: #ffeb3b;
@@ -208,6 +206,10 @@ section p {
 
 .Cpp {
     background: purple;
+}
+
+.javac {
+    background: #red;
 }
 
 /* Keyframes Animations */
