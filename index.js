@@ -15,17 +15,22 @@ document.addEventListener("DOMContentLoaded", function() {
         threshold: 0.5
     };
 
-    let observer = new IntersectionObserver(function(entries, observer) {
+    let observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                let progressBars = document.querySelectorAll(".progress");
+                let progressBars = entry.target.querySelectorAll(".progress");
                 progressBars.forEach(progress => {
-                    progress.style.width = progress.getAttribute("data-width");
+                    if (!progress.classList.contains("animated")) { // Prevent re-triggering
+                        progress.style.width = progress.getAttribute("data-width");
+                        progress.classList.add("animated");
+                    }
                 });
-                observer.disconnect();
             }
         });
     }, options);
 
-    observer.observe(document.querySelector("#skills"));
+    let skillsSection = document.querySelector("#skills");
+    if (skillsSection) {
+        observer.observe(skillsSection);
+    }
 });
