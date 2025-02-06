@@ -34,13 +34,25 @@ body {
     animation: slideright 1s ease forwards;
 }
 
+.navbar {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling if links overflow */
+    white-space: nowrap; /* Prevent links from wrapping */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+.navbar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
 .navbar a {
     display: inline-block;
     font-size: 18px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: 20px; /* Reduced margin for better spacing */
     transition: .3s;
     animation: slidetop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
@@ -175,7 +187,7 @@ section p {
     background: #4caf50;
 }
 
-.C-++ {
+.java {
     background: #f44336;
 }
 
@@ -246,7 +258,7 @@ img {
 
     .navbar a {
         font-size: 16px;
-        margin-left: 20px;
+        margin-left: 15px; /* Further reduced margin */
     }
 
     .home {
@@ -302,7 +314,7 @@ img {
 
     .navbar a {
         font-size: 14px;
-        margin-left: 10px;
+        margin-left: 10px; /* Minimal margin for small screens */
     }
 
     .home-content h1 {
