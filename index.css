@@ -155,8 +155,6 @@ section p {
     margin-bottom: 20px;
 }
 
-/* Other CSS rules... */
-
 .progress-bar {
     background: #333;
     border-radius: 50px;
@@ -189,6 +187,9 @@ section p {
     background: #2196f3;
 }
 
+.C {
+    background: purple;
+}
 
 /* Keyframes animation */
 @keyframes slideright {
@@ -234,5 +235,99 @@ img {
     }
     100% {
         width: var(--width);
+    }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 5% 0;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-img img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-top: 30px;
+    }
+
+    .social-media a {
+        margin: 20px 10px 20px 0;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .social-media a {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 14px;
     }
 }
