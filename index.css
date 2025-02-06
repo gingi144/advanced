@@ -1,14 +1,16 @@
+/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
+/* Global Styles */
 body {
     background: #1f242d;
     color: #fff;
-    scroll-behavior: smooth;
 }
 
 .header {
@@ -24,6 +26,7 @@ body {
     z-index: 100;
 }
 
+/* Logo */
 .logo {
     font-size: 25px;
     color: #fff;
@@ -34,16 +37,17 @@ body {
     animation: slideright 1s ease forwards;
 }
 
+/* Navigation */
 .navbar {
     display: flex;
-    overflow-x: auto; /* Allow horizontal scrolling if links overflow */
-    white-space: nowrap; /* Prevent links from wrapping */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .navbar::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome/Safari */
+    display: none;
 }
 
 .navbar a {
@@ -52,10 +56,10 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 20px; /* Reduced margin for better spacing */
-    transition: .3s;
-    animation: slidetop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
+    margin-left: 20px;
+    transition: 0.3s;
+    animation: slidetop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 
 .navbar a:hover,
@@ -63,8 +67,8 @@ body {
     color: aqua;
 }
 
+/* Hero Section */
 .home {
-    position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -100,15 +104,16 @@ body {
     font-size: 16px;
 }
 
+/* Profile Image */
 .home-img img {
     max-width: 450px;
-    margin-right: -20px;
-    box-shadow: 1 10px 0 #0ef;
+    box-shadow: 0 10px 20px rgba(0, 238, 255, 0.5);
     animation: zoomIn 1s ease forwards;
     opacity: 0;
     animation-delay: 2s;
 }
 
+/* Social Media Icons */
 .social-media a {
     display: inline-flex;
     justify-content: center;
@@ -122,7 +127,7 @@ body {
     color: #0ef;
     text-decoration: none;
     margin: 30px 15px 30px 0;
-    transition: .5s ease;
+    transition: 0.5s ease;
 }
 
 .social-media a:hover {
@@ -131,6 +136,7 @@ body {
     box-shadow: 0 0 20px #0ef;
 }
 
+/* Button */
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -144,7 +150,7 @@ body {
     font-weight: 600;
 }
 
-/* Section styles */
+/* Section Styles */
 section {
     padding: 100px 10%;
 }
@@ -162,7 +168,7 @@ section p {
     text-align: center;
 }
 
-/* Skills progress bars */
+/* Skills Progress Bars */
 .skill {
     margin-bottom: 20px;
 }
@@ -180,14 +186,15 @@ section p {
     height: 10px;
     border-radius: 50px;
     width: 0; /* Start with 0 width */
-    transition: width 2s; /* Animate width change */
+    transition: width 2s ease-in-out;
 }
 
+/* Skill Colors */
 .python {
     background: #4caf50;
 }
 
-.java {
+.cpp {
     background: #f44336;
 }
 
@@ -199,11 +206,11 @@ section p {
     background: #2196f3;
 }
 
-.C {
+.c {
     background: purple;
 }
 
-/* Keyframes animation */
+/* Keyframes Animations */
 @keyframes slideright {
     0% {
         transform: translateX(-100px);
@@ -221,13 +228,9 @@ section p {
         opacity: 0;
     }
     100% {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
     }
-}
-
-img {
-    box-shadow: 0 0 50px #0ef;
 }
 
 @keyframes zoomIn {
@@ -236,21 +239,12 @@ img {
         opacity: 0;
     }
     100% {
-        transform: translateX(1);
+        transform: scale(1);
         opacity: 1;
     }
 }
 
-@keyframes animateProgress {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: var(--width);
-    }
-}
-
-/* Responsive Design for Mobile Devices */
+/* Responsive Design for Tablets */
 @media (max-width: 768px) {
     .header {
         padding: 20px 5%;
@@ -258,7 +252,7 @@ img {
 
     .navbar a {
         font-size: 16px;
-        margin-left: 15px; /* Further reduced margin */
+        margin-left: 15px;
     }
 
     .home {
@@ -281,7 +275,6 @@ img {
 
     .home-img img {
         max-width: 100%;
-        margin-right: 0;
         margin-top: 30px;
     }
 
@@ -307,6 +300,7 @@ img {
     }
 }
 
+/* Responsive Design for Mobile Devices */
 @media (max-width: 480px) {
     .logo {
         font-size: 20px;
@@ -314,7 +308,7 @@ img {
 
     .navbar a {
         font-size: 14px;
-        margin-left: 10px; /* Minimal margin for small screens */
+        margin-left: 10px;
     }
 
     .home-content h1 {
